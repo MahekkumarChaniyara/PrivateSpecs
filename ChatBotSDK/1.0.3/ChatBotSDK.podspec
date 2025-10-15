@@ -18,28 +18,9 @@ Pod::Spec.new do |s|
   s.resources = 'ios/WotNotSDK-Framework/ChatBotSDK/ChatBotSDK/Assets.xcassets/**/*'
 
   # Frameworks
-  s.frameworks = 'UIKit', 'SwiftUI', 'Foundation', 'Combine', 'AVFoundation'
-
+  s.frameworks = 'Foundation', 'UIKit', 'SwiftUI', 'Combine', 'AVFoundation'
+  
   # Dependencies
   s.dependency 'Socket.IO-Client-Swift', '~> 16.0'
   s.dependency 'Starscream', '~> 4.0'
-
-  # Exclude tests
-  s.exclude_files = [
-    'ios/WotNotSDK-Framework/ChatBotSDK/ChatBotSDKTests/**/*',
-    'ios/WotNotSDK-Framework/ChatBotSDK/ChatBotSDKUITests/**/*',
-    '**/*Test*.swift',
-    '**/*Tests*.swift'
-  ]
-
-  # Pod validation settings
-  s.pod_target_xcconfig = {
-    'SWIFT_VERSION' => '5.0',
-    'IPHONEOS_DEPLOYMENT_TARGET' => '15.0'
-  }
-
-  s.user_target_xcconfig = {
-    'SWIFT_VERSION' => '5.0',
-    'IPHONEOS_DEPLOYMENT_TARGET' => '15.0'
-  }
 end
