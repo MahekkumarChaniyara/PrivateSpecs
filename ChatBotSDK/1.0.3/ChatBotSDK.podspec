@@ -27,14 +27,10 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '15.0'
     s.swift_versions        = ['5.0', '5.1', '5.2', '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.9']
   
-    # Use pre-built frameworks for security (source code not visible to clients)
-    s.vendored_frameworks = [
-      'ios/WotNotSDK-Framework/Frameworks/ios-arm64.framework',
-      'ios/WotNotSDK-Framework/Frameworks/ios-arm64-simulator.framework',
-      'ios/WotNotSDK-Framework/Frameworks/ios-x86_64-simulator.framework'
-    ]
+    # Source files (for testing - will be replaced with frameworks later)
+    s.source_files = 'ios/WotNotSDK-Framework/ChatBotSDK/ChatBotSDK/**/*.{swift}'
   
-    # Resources (only assets, no source code)
+    # Resources
     s.resources = 'ios/WotNotSDK-Framework/ChatBotSDK/ChatBotSDK/Assets.xcassets'
   
     # Frameworks
@@ -44,7 +40,13 @@ Pod::Spec.new do |s|
     s.dependency 'Socket.IO-Client-Swift', '~> 16.0'
     s.dependency 'Starscream', '~> 4.0'
   
-    # No need to exclude files since we're using pre-built frameworks
+    # Exclude tests
+    s.exclude_files = [
+      'ios/WotNotSDK-Framework/ChatBotSDK/ChatBotSDKTests/**/*',
+      'ios/WotNotSDK-Framework/ChatBotSDK/ChatBotSDKUITests/**/*',
+      '**/*Test*.swift',
+      '**/*Tests*.swift'
+    ]
   
     # Pod validation settings
     s.pod_target_xcconfig = {
