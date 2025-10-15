@@ -24,7 +24,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "ChatBotSDK",
-            url: "https://github.com/wotnotbot/chatbot-sdk/releases/download/v1.0.3/ChatBotSDK.xcframework.zip",
+            url: "https://github.com/MahekkumarChaniyara/PrivateSpecs/releases/download/1.0.1/ChatBotSDK.xcframework.zip",
             checksum: "c7ffb32670a74eb818c387b7287b9c4ceaeffcebd22413740f6637cfe4bf16a1"
         ),
     ]
