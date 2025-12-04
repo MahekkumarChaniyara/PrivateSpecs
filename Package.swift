@@ -24,8 +24,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "WotNotSDK",
-            url: "https://github.com/MahekkumarChaniyara/PrivateSpecs/releases/download/v1.0.5/WotNotSDK.xcframework.zip",
-            checksum: "b303cfbc004b2f29d7018fe12e30148cd42358331c129aebcfd2e17e5d76ce5b"
+            url: "https://github.com/MahekkumarChaniyara/PrivateSpecs/releases/download/v1.0.6/WotNotSDK.xcframework.zip",
+            checksum: "13baa1392d96d7c0699ecf9a4514c69cde618b94a5fb03792823e69f93cccbce"
         ),
     ]
 )
